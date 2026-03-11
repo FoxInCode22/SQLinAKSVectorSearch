@@ -45,7 +45,7 @@ We need persistent storage for the database files and the AI models to ensure th
 <b>PVC and Storage Class (pvc.yaml) </b>  
 
 We use Azure Disk (Standard_LRS) to provide persistent volumes for both SQL data and the Ollama model library.  
-- SQL Data: (Adjust based on your dataset).
+- SQL Data: (Adjust the disk size based on your dataset).
 - Ollama Models: Persistent storage prevents re-downloading large models on every restart.
   
 <b> Caddy Configuration (caddy-config.yaml) </b>  
@@ -54,7 +54,8 @@ The Caddyfile tells Caddy to listen on port 8443 using our generated certificate
 
 ### Phase 3: Deploying the AI-SQL Pod
 
-The ai-sql-pod.yaml brings everything together.  
+The ai-sql-pod.yaml brings everything together. 
+
 Key Container Roles:  
 - sqlserver: Includes a custom command block that injects the localhost.crt into the Linux and SQL Server trust stores.  
   This is critical; otherwise, SQL Server will reject the connection to the Caddy proxy due to an untrusted certificate.
