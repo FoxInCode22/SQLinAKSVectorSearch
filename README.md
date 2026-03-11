@@ -146,6 +146,7 @@ By combining SQL Server vector search, Ollama embedding models, and Kubernetes o
 - High Performance: Localhost communication between the DB and the AI model eliminates network jitter.
 - Secure: Integrated TLS encryption and persistent Azure storage.
 
+---
 
 <b>References :</b> https://github.com/tejasaks/PublicDemos/tree/main/SQLAICustomContainer
 
