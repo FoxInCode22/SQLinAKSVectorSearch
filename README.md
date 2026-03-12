@@ -67,6 +67,17 @@ kubectl apply -f pvc.yaml
 kubectl apply -f caddy-config.yaml
 kubectl apply -f ai-sql-pod.yaml
 ```
+#### Download the embedding model inside the Ollama container  
+
+- Connect to the Ollama container in the pod:
+```
+kubectl exec -it ai-sql-ollama -c ollama -- bash
+```
+- Pull the embedding model:
+```
+ollama pull nomic-embed-text
+```
+This downloads the nomic-embed-text embedding model, which will be used to generate vector embeddings for semantic search.
 
 ### Phase 4: Database Implementation
 
