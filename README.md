@@ -149,7 +149,11 @@ By combining SQL Server vector search, Ollama embedding models, and Kubernetes o
 
 ---
 
-<b>References :</b> https://github.com/tejasaks/PublicDemos/tree/main/SQLAICustomContainer
+<b>References :</b> 
+
+https://github.com/tejasaks/PublicDemos/tree/main/SQLAICustomContainer
+
+https://ubuntu.com/blog/sql-server-2025-on-ubuntu
 
 
 
